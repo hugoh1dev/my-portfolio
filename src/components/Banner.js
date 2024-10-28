@@ -2,7 +2,7 @@ import React from 'react';
 // images
 import Image from '../assets/avatar.svg';
 // icons
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 // type animation
 import { TypeAnimation } from 'react-type-animation';
 // motion
@@ -54,7 +54,7 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
               className='mb-8 max-w-lg mx-auto lg:mx-0'>
-              lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Passionate developer with a love for technology and innovation, translating ideas into code since December 2022. Focused on creating efficient and intuitive solutions with TypeScript, React, Next.js, and Tailwind CSS, always striving to optimize the development process and deliver high-quality user experiences. Based in Porto, Portugal, and ready for new projects that challenge and inspire.
             </motion.p>
             <motion.div 
               variants={fadeIn('up', 0.6)} 
@@ -62,10 +62,10 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-                <button className='flex items-center justify-between gap-3 btn btn-lg'>
+                <a href='https://wa.link/qgjrct' target='blank' className='flex items-center justify-between gap-3 btn btn-lg'>
                   Contact me
                   <FaWhatsapp size={24} />
-                </button>
+                </a>
               <a href='https://www.github.com/hugoh1dev' className='text-gradient btn-link' target='blank'>
                 My Portfolio
               </a>
@@ -83,9 +83,9 @@ const Banner = () => {
               <a href='https://www.linkedin.com/in/hugo-junior-a5315a263/' target='blank'>
                 <FaLinkedin />
               </a>
-              {/* <a href='#' target='blank'>
-                <FaWhatsapp />
-              </a> */}
+              <a href='https://www.instagram.com/hugoh1_/' target='blank'>
+                <FaInstagram />
+              </a>
             </motion.div>
           </div>
           {/* image */}
@@ -94,7 +94,7 @@ const Banner = () => {
             initial='hidden' 
             whileInView={'show'}
             className='hidden lg:flex flex-1 maw-w-[320px] lg:max-w-[482px]'>
-            <img src={Image} alt='' />
+            <img src={Image} alt='avatar image' />
           </motion.div>
         </div>
       </div>

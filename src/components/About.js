@@ -39,7 +39,7 @@ const About = () => {
               I'm a Freelance Front-end Developer with over 12 months of experience.
             </h3>
             <p className='mb-6'>
-              Specialized in JavaScript/TypeScript development, learning technologies: React | Next | React Native
+              Learning technologies: <br/> React | Next | React Native | Vue | Tailwind CSS | Typescript
             </p>
             {/* stats */}
             <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
@@ -74,10 +74,10 @@ const About = () => {
               </div>
             </div>
             <div className='flex gap-x-8 items-center'>
-            <button className='flex items-center gap-x-4 btn btn-lg'>
+            <a href='https://wa.link/qgjrct' target='blank' className='flex items-center gap-x-4 btn btn-lg'>
               Contact me
               <FaWhatsapp size={24} />
-            </button>
+            </a>
             <a href='https://www.github.com/hugoh1dev' className='text-gradient btn-link' target='blank'>
               My Portfolio
             </a>
