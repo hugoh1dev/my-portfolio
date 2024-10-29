@@ -53,6 +53,7 @@ const Services = () => {
             <a 
               href="https://github.com/hugoh1dev?tab=repositories" 
               target="_blank"
+              rel="noreferrer"
               className='btn btn-sm flex items-center justify-center gap-x-4 h-[50px] w-[200px]'
             >
               See my work
@@ -82,10 +83,10 @@ const Services = () => {
                       </p>
                     </div>
                     <div className='flex flex-col flex-1 items-end'>
-                      <a href='#' className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
+                      <a href='#' rel="noreferrer" className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
                         <BsArrowUpRight />
                       </a>
-                      <a href='#' className='text-gradient text-sm'>
+                      <a href='#' rel="noreferrer" className='text-gradient text-sm'>
                         {link}
                       </a>
                     </div>

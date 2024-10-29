@@ -33,6 +33,7 @@ const Work = () => {
               <a 
                 href="https://github.com/hugoh1dev?tab=repositories" 
                 target="_blank"
+                rel="noreferrer"
                 className='btn btn-sm p-5 flex items-center justify-center gap-3 h-[50px] w-[180px]'
               >
                 All Projects
