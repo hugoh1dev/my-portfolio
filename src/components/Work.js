@@ -47,7 +47,8 @@ const Work = () => {
               <img 
                 className='group-hover:scale-125 transition-all duration-500' 
                 src={Img1} 
-                alt='work image 1' 
+                alt='work 1'
+                rel='noopener noreferrer'
               />
               {/* pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
@@ -73,7 +74,8 @@ const Work = () => {
               <img 
                 className='group-hover:scale-125 transition-all duration-500' 
                 src={Img2} 
-                alt='work image 2' 
+                alt='work 2'
+                rel='noopener noreferrer'
               />
               {/* pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
@@ -92,7 +94,8 @@ const Work = () => {
               <img 
                 className='group-hover:scale-125 transition-all duration-500' 
                 src={Img3} 
-                alt='work image 3' 
+                alt='work 3'
+                rel='noopener noreferrer'
               />
               {/* pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>

@@ -7,12 +7,29 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 // EmailJS
 import emailjs from 'emailjs-com';
+// Material-UI
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Contact = () => {
-  // Ref to store form data
   const form = useRef();
+  const [open, setOpen] = React.useState(false);
 
-  // Function to send the email
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
   const sendEmail = (e) => {
     e.preventDefault(); // Prevents page reload
 
@@ -25,8 +42,12 @@ const Contact = () => {
     .then(response => {
       console.log('Email sent successfully!', response.status, response.text);
       form.current.reset(); // Clears form after submission
+      handleClick(); // Open snackbar
     })
-    .catch(error => console.error('Error sending email:', error));
+    .catch(error => {
+      console.error('Error sending email:', error);
+      alert('There was an error sending the email. Please try again later.');
+    });
   };
 
   return (
@@ -60,7 +81,7 @@ const Contact = () => {
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' 
               type='text'
               placeholder='Your name'
-              name='from_name' // Name attribute is important for useRef with EmailJS
+              name='from_name'
             />
             <input 
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' 
@@ -79,6 +100,16 @@ const Contact = () => {
             </button>
           </motion.form>
         </div>
+        <Snackbar 
+          open={open} 
+          autoHideDuration={6000} 
+          onClose={handleClose}
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }} // Positioning the snackbar at the top-right
+        >
+          <Alert onClose={handleClose} severity="success">
+            Email sent successfully!
+          </Alert>
+        </Snackbar>
       </div>
     </section>
   );

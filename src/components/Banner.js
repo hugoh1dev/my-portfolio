@@ -94,7 +94,7 @@ const Banner = () => {
             initial='hidden' 
             whileInView={'show'}
             className='hidden lg:flex flex-1 maw-w-[320px] lg:max-w-[482px]'>
-            <img src={Image} alt='avatar image' />
+            <img src={Image} alt='avatar' rel='noopener noreferrer'/>
           </motion.div>
         </div>
       </div>
