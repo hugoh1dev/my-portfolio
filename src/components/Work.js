@@ -47,15 +47,15 @@ const Work = () => {
               <img 
                 className='group-hover:scale-125 transition-all duration-500' 
                 src={Img1} 
-                alt='' 
+                alt='work image 1' 
               />
               {/* pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>UI/UX Desing</span>
+                <span className='text-gradient'>Mobile Development</span>
               </div>
               {/* title */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <span className='text-3xl text-white'>Project Title</span>
+                <span className='text-3xl text-white'>Space Quiz</span>
               </div>
             </div>
           </motion.div>
@@ -73,15 +73,15 @@ const Work = () => {
               <img 
                 className='group-hover:scale-125 transition-all duration-500' 
                 src={Img2} 
-                alt='' 
+                alt='work image 2' 
               />
               {/* pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>UI/UX Desing</span>
+                <span className='text-gradient'>Mobile Development</span>
               </div>
               {/* title */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <span className='text-3xl text-white'>Project Title</span>
+                <span className='text-3xl text-white'>To do List</span>
               </div>
             </div>
             {/* image 3 */}
@@ -92,15 +92,15 @@ const Work = () => {
               <img 
                 className='group-hover:scale-125 transition-all duration-500' 
                 src={Img3} 
-                alt='' 
+                alt='work image 3' 
               />
               {/* pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>UI/UX Desing</span>
+                <span className='text-gradient'>React | TypeScript</span>
               </div>
               {/* title */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <span className='text-3xl text-white'>Project Title</span>
+                <span className='text-3xl text-white'>Social Media Platform</span>
               </div>
             </div>
           </motion.div>

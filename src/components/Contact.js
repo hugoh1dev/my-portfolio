@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 // icons
 import { FaTelegramPlane } from 'react-icons/fa';
 // motion
 import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../variants';
+// EmailJS
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  // Ref to store form data
+  const form = useRef();
+
+  // Function to send the email
+  const sendEmail = (e) => {
+    e.preventDefault(); // Prevents page reload
+
+    emailjs.sendForm(
+      'service_h7wr6ig',  // Replace with your EmailJS Service ID
+      'template_9tlicya', // Replace with your EmailJS Template ID
+      form.current,  // Pass the form reference directly
+      'xyl4ZhJgXDpetrymE' // Replace with your EmailJS public key
+    )
+    .then(response => {
+      console.log('Email sent successfully!', response.status, response.text);
+      form.current.reset(); // Clears form after submission
+    })
+    .catch(error => console.error('Error sending email:', error));
+  };
+
   return (
     <section className='py-16 lg:section' id='contact'>
       <div className='container mx-auto'>
@@ -27,6 +49,8 @@ const Contact = () => {
           </motion.div>
           {/* form */}
           <motion.form 
+            ref={form} // Assigns the ref to the form
+            onSubmit={sendEmail} // Adds the submit event
             variants={fadeIn('left', 0.3)}
             initial='hidden'
             whileInView={'show'}
@@ -36,17 +60,20 @@ const Contact = () => {
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' 
               type='text'
               placeholder='Your name'
+              name='from_name' // Name attribute is important for useRef with EmailJS
             />
             <input 
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' 
-              type='text'
+              type='email'
               placeholder='Your email'
+              name='reply_to'
             />
             <textarea
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12'
               placeholder='Your message'
+              name='message'
             ></textarea>
-            <button className='btn btn-lg flex items-center justify-center gap-3'>
+            <button type='submit' className='btn btn-lg flex items-center justify-center gap-3'>
               Send message
               <FaTelegramPlane size={22} />
             </button>
